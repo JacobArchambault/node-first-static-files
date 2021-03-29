@@ -5,7 +5,7 @@ app.use(express.static('public'))  // serve static files
 
 app.use((_req, res) => res.status(404).send("Sorry, no such page!"));
 
-app.listen(3000, () => console.log('app started on localhost:3000, press Ctrl-C to terminate.'));
+app.listen(3000, console.log('app started on localhost:3000, press Ctrl-C to terminate.'));
 
 /* without a specified route the index.html page in the public folder loads
    that is, if url = 'localhost:3000', then the index.html page loads.
